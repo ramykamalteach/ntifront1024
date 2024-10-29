@@ -1,0 +1,20 @@
+where I write CSS :
+    - external file *.CSS
+    - in <head><style>
+    - inline <anyTag style="css attributes">
+
+
+CSS Rule :
+    selector {
+        attribute : value value value ;
+        attribute2 : value ... ;
+        ....
+    }
+
+
+selectors https://www.w3schools.com/cssref/css_selectors.php
+
+    - html tag name
+    - html class name .
+    - html id name #
+    
