@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="001.html" method="post" enctype="multipart/form-data">
+
+        <label for="userName">user name</label>        
+        <input type="text" id="userName" name="userName" placeholder="user name here !!!">
+        <br>
+        <label for="password">user password</label>        
+        <input type="password" id="password" name="password" placeholder="use complicaTED password">
+        <br>
+        <h3>
+            your hobbies
+        </h3>
+        <input type="checkbox" id="sports" name="sports">
+        <label for="sports">sports</label>
+        <input type="checkbox" id="eat" name="eat" checked="checked">
+        <label for="eat">eat</label>
+        <input type="checkbox" id="tv" name="tv">
+        <label for="tv">tv</label>
+        <input type="checkbox" id="miditation" name="miditation">
+        <label for="miditation">miditation</label>
+        <h3>
+            martial status
+        </h3>
+        <input type="radio" name="martialStatus" id="single" value="single">
+        <label for="single">single</label>
+        <input type="radio" name="martialStatus" id="engaged" value="engaged">
+        <label for="engaged">engaged</label>
+        <input type="radio" name="martialStatus" id="married" value="married" checked="checked">
+        <label for="married">married</label>
+        <input type="radio" name="martialStatus" id="divorced" value="divorced">
+        <label for="divorced">divorced</label>
+        <input type="radio" name="martialStatus" id="widowed" value="widowed">
+        <label for="widowed">widowed</label>
+        <br><br>
+        <label for="cv">upload your CV</label>
+        <input type="file" id="cv" name="cv">
+        <br><br>
+        <label for="notes">Notes</label>
+        <textarea name="notes" id="notes" placeholder="your notes about members"></textarea>
+        
+        <br><br>
+        <input type="submit" value="Send data">
+
+        <input type="reset" value="Clear inputs data">
+    </form>
+</body>
+</html>
