@@ -1,0 +1,32 @@
+- selector with attribute value
+    https://www.w3schools.com/css/css_attribute_selectors.asp
+
+- event odd , child
+
+- combin space > + ~
+    https://www.w3schools.com/css/css_combinators.asp
+
+- , more than one selector for same css rule
+
+-----------------------------------------------------------------------------
+Colors :
+    - color name
+    - rgb hexadecimal code
+    - rgb function
+    - rgba function
+    - hsl function
+
+    https://www.w3schools.com/tags/ref_colornames.asp
+
+-----------------------------------------------------------------------
+
+Priority (highiest to lower):
+    - !important
+    - inline attributes
+    - come last has Priority (<style> vs <link>)
+    ......
+    - browser defaults
+
+---------------------------------------------------------------------
+
+fonts
