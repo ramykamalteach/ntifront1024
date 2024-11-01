@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myBlue: #2c3e50;
+    --myGreen: #1abc9c;
+    --myWhite: #ffffff;
+    --mainFont: "Montserrat";
+}
+
+/* .montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+} */
+
+/* h1 {
+    font-family: var(--mainFont);
+    color: var(--myWhite);
+} */
+
+nav {
+    background-color: var(--myBlue);
+    color: var(--myWhite);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+
+    padding: 24px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav #menuItems {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--myWhite);
+}
+
+/* ----------------------  banner ---------------------------- */
+
+#banner {
+    text-align: center;
+    background-color: var(--myGreen);
+    padding-top: 30px; padding-bottom: 50px;
+}
+#banner > * {
+    margin-top: 25px;
+}
+#bannerPhoto {
+    width: 240px;
+    display: inline-block;
+    /* margin: 0 auto; */
+}
+#lineStarLine {
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    
+}
+#lineStarLine hr {
+    width: 250px;
+    height: 7px;
+    background-color: var(--myWhite);
+    border-radius: 5px;
+}
+#lineStarLine svg {
+    fill: var(--myWhite) !important;
+} 
