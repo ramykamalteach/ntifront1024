@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myBlue: #2c3e50;
+    --myGreen: #1abc9c;
+    --myWhite: #ffffff;
+    --mainFont: "Montserrat";
+    --titleFontSize : 40px;
+}
+
+/* .montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+} */
+
+/* h1 {
+    font-family: var(--mainFont);
+    color: var(--myWhite);
+} */
+
+nav {
+    background-color: var(--myBlue);
+    color: var(--myWhite);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+
+    padding: 24px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav #menuItems {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--myWhite);
+}
+
+/* ----------------------  banner ---------------------------- */
+
+#banner {
+    text-align: center;
+    background-color: var(--myGreen);
+    padding-top: 30px; padding-bottom: 50px;
+}
+#banner > * {
+    margin-top: 25px;
+}
+
+#banner h1 {
+    color: var(--myWhite);
+    text-transform: uppercase;
+    font-size: var(--titleFontSize);
+    font-family: var(--mainFont);
+}
+
+#bannerPhoto {
+    width: 240px;
+    display: inline-block;
+    /* margin: 0 auto; */
+}
+.lineStarLine {
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    
+}
+.lineStarLine hr {
+    width: 250px;
+    height: 7px;
+    background-color: var(--myWhite);
+    border-radius: 5px;
+}
+.lineStarLine svg {
+    fill: var(--myWhite) !important;
+} 
+
+
+/* ------------------------------------------------------------ */
+
+#portfolio {
+    text-align: center;
+    background-color: var(--myWhite);
+    padding-top: 50px; padding-bottom: 50px;
+}
+
+#portfolio h1 {
+    text-transform: uppercase;
+    color: var(--myBlue);
+    font-size: var(--titleFontSize);
+    font-family: var(--mainFont);
+}
+
+#portfolio .lineStarLine hr  {
+    background-color: var(--myBlue);
+}
+
+#portfolio .lineStarLine svg {
+    fill: var(--myBlue) !important;
+}
+
+.portfolioCard {
+    width: 30%;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#porfolioGallery {
+    height: 110vh;
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+
+.portfolioCard > div {
+    text-align: center;
+    font-family: var(--mainFont);
+    color: var(--myWhite);
+    font-size: 100px;
+    font-weight: bold;
+
+    display: flex; align-items: center; justify-content: center;
+
+    cursor: pointer;
+    
+    width: 100%; height: 100%;
+    position: relative; top: 0; left: 0;
+    background-color: var(--myGreen);
+    
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.portfolioCard > div:hover {
+    opacity: 0.75;
+    transition: 0.7s all;
+}

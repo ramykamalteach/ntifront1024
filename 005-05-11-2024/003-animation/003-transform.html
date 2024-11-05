@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #d01 {
+            position: relative;
+            top: 50vh; left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-iteration-count: 1;
+            animation-duration: 7s;
+        }
+
+        @keyframes example {
+            0%  {
+                    background-color:red;
+                    top: 50vh; left: 0;
+                }
+            33%  {
+                    background-color:rgb(148, 234, 1);
+                    top: 100vh; left: 50vw;
+                    transform: translateY(-100%);
+            }
+            66%  {
+                    background-color:rgb(148, 234, 1);
+                    top: 50vh; left: 100vw;
+                    transform: translateX(-100%);
+            }
+            100%  {
+                    background-color:red;
+                    top: 50vh; left: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="d01">
+
+    </div>
+</body>
+</html>
