@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log(factorial(5));
+        console.log(factorial(4));
+
+        function factorial(x) {
+            if(x == 1) {
+                return 1;
+            }
+            else {
+                return x * factorial(x-1);
+            }
+        }
+
+        /* function factorial(x) {
+            result = 1;
+            for(i = x; i >= 1; i--) {
+                result *= i;
+            }
+
+            return result;
+        } */
+
+        /* --------------------------------------------- */
+
+        /* console.log(tshirtPrice("xl", "red"));
+        console.log(tshirtPrice("large", "green"));
+        console.log(tshirtPrice("small", "red"));
+
+        function tshirtPrice(size, color) {
+            priceOfSize = sizeFn(size);
+            priceOfColor = colorFn(color);
+            
+            return priceOfSize + priceOfColor;
+        }
+
+        function sizeFn(size) {
+            if(size == "small") {
+                return 50;
+            }
+            else if(size == "large") {
+                return 70;
+            }
+            else if(size == "xl") {
+                return 80;
+            }
+            else {
+                return 90;
+            }
+        }
+
+        function colorFn(color) {
+            if(color == "red") {
+                return 100;
+            }
+            else {
+                return 90;
+            }
+        } */
+        /* ----------------------------------------------------------- */
+
+        /* console.log(price(200, 0.2));
+        console.log(price(100, 0.15));
+
+        function price(priceBeforeDiscount, discountPercent) {
+            returnedPrice = priceBeforeDiscount * (1 - discountPercent);
+            return returnedPrice;
+        } */
+
+        /* ---------------------------------------------------------- */
+
+        /* console.log(sum(33 , 44));
+
+        function sum(x, y) {
+            return x + y;
+        }
+
+        console.log(sum(333 , 444)); */
+
+        /* console.log(pi());
+
+        function pi() {
+            return 22/7;
+        }
+
+        console.log(pi() * 5 * 5); */
+
+        /* fn(3, 5);
+
+        function fn(x, y) {
+            console.log(x * y);
+        }
+
+        fn(11, 22); */
+
+
+        /* fn();
+
+        function fn() {
+            console.log("hello everyone");
+        }
+
+        fn(); */
+    </script>
+</body>
+</html>

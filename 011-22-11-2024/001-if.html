@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(i = 1; i <= 1000; i++) {
+            isPrime = true;
+            for(j = i - 1; j >= 2; j--) {
+                if(i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if(isPrime) {
+                console.log(i);
+            }
+        }
+
+
+        /* for(i = 1; i <= 5; i++) {
+            for(j = 1; j <= 7; j++) {
+                for(k = 1; k <= 11; k++) {
+                    total = i * 17 + j * 13 + k * 9;
+                    if(total == 100) {
+                        console.log(i, j, k);
+                    }
+                }
+            }
+        } */
+
+
+        /* for(i = 7; i <= 1000; i += 7) {
+            if(i % 2 == 1 
+                && i % 3 == 1
+                && i % 4 == 1 
+                && i % 5 == 1 
+                && i % 6 == 1 
+            ){
+                console.log(i);
+            }
+        } */
+
+
+
+
+        /* >   <   >=   <=    ==    !=    ===   !== */
+
+        /*    &&  and ,    ||  or ,   !  not */
+
+        /* branch = "tanta";
+        job = "eng";
+
+        if(!(branch == "tanta" && job == "doctor")) {
+            console.log("get gift");
+        }
+        else {
+            console.log("get nothing");
+        } */
+
+
+        /* t01 = 30;
+        t02 = 80;
+
+        if(t01 >= 50 || t02 >= 50) {
+            console.log("pass");
+        }
+        else {
+            console.log("fail");
+        } */
+
+
+        /* x = 49;
+        if(x >= 50) {
+            console.log("pass");
+        }
+        else {
+            console.log("fail");
+        } */
+    </script>
+</body>
+</html>
