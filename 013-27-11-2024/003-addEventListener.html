@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <input type="text" id="userName">
+        <span id="chLength">0</span>
+    </h1>
+
+    <h1 id="title01">this is my text</h1>
+
+    <h1 id="price">$ 55</h1>
+    <button id="bt01">discount</button>
+
+    <script>
+        document.querySelector("#title01").addEventListener("mouseover", () => {
+            document.querySelector("#title01").innerText = "New title";
+        });
+
+        document.querySelector("#title01").addEventListener("mouseout", () => {
+            document.querySelector("#title01").innerText = "OLD title";
+        });
+
+        document.querySelector("#userName").addEventListener("keydown", () => {
+            i = document.querySelector("#userName").value.length;
+            document.querySelector("#chLength").innerText = i + " characters";
+        });
+
+
+        document.querySelector("#bt01").addEventListener("click", function(){
+            document.querySelector("#price").innerText = "44 $";
+        });
+    </script>
+</body>
+</html>

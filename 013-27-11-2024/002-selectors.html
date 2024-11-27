@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="fnQuery();">Click for change somethings</button>
+
+    <h3>
+        <div class="item">111</div>
+        <div class="item">222</div>
+        <div>
+            <div class="item">111</div>
+            <div class="item">222</div>
+        </div>
+    </h3>
+    
+    <div class="item">333</div>
+
+    <button onclick="changeItems();">Change All Items</button>
+
+    <div id="price">55 L.E.</div>
+    <button onclick="calDiscount();">discount</button>
+
+    <script>
+        function fnQuery() {
+            document.querySelector("#price").innerText = "25 $";
+
+            items = document.querySelectorAll("h3 > .item");
+            for(i = 0; i < items.length; i++) {
+                items[i].innerText = "Value changed";
+            }
+
+        }
+
+
+        function changeItems() {
+            items = document.getElementsByClassName("item"); //document.getElementsByTagName
+            for(i = 0; i < items.length; i++) {
+                items[i].innerText = "new value";
+            }
+        }
+
+
+
+        function calDiscount() {
+            document.getElementById("price").innerText = "30 L.E.";
+        }
+    </script>
+</body>
+</html>
