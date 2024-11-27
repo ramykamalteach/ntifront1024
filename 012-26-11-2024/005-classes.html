@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student {
+            constructor (name, degree) {
+                this.name = name;
+                this.degree = degree;
+            }
+            isPass () {
+                if(this.degree >= 50) {
+                    return "pass";
+                }
+                else {
+                    return "failed";
+                }
+            }
+        }
+
+        const osama = new student("osama ahmed", 50);
+
+        console.log(osama.name + " " +  osama.isPass());
+
+        const khaled = new student("Khaled Nabel", 49);
+
+        console.log(khaled.name + " " +  khaled.isPass());
+    </script>
+
+
+    
+</body>
+</html>
