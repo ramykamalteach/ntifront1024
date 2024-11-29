@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            position: relative;
+            border: 3px red solid;
+            border-radius: 15px;
+            background-color: pink;
+            padding: 5px 15px;
+        }
+
+        h2 {
+            position: absolute;
+            right: 10%;
+            top: -100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="taskTitle">
+    <button id="addBt">Add Task</button>
+    <div id="tasksContainer">
+
+    </div>
+
+    <script>
+        document.querySelector("#addBt").addEventListener("click", () => {
+            taskTitle = document.querySelector("#taskTitle").value;
+            if(taskTitle.length != 0) {
+                document.querySelector("#taskTitle").value = "";
+
+                taskOnBoard = document.createElement("h1");
+                taskOnBoard.innerText = taskTitle;
+                
+                let removeSign = document.createElement("h2");
+                removeSign.innerText = "X";
+                removeSign.addEventListener("click", ()=>{
+                    removeSign.parentNode.remove();
+                });
+
+                taskOnBoard.append(removeSign);
+
+                document.querySelector("#tasksContainer").append(taskOnBoard);
+            }
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t01">this is first title in page</h1>
+    <button id="btRemove">Remove title</button>
+
+    <br><br>
+
+    <img src="img/avatar-01.jpg" alt="" id="avatar">
+    <br>
+    <button id="changePhotoBt">change photo</button>
+
+
+
+    <h1>js control html tags
+
+    <div id="tag01">
+        old text in tag
+    </div>
+
+    <a href="https://www.google.com" id="searchLink">Goto Google</a>
+
+    <button id="bt01">click me</button>
+    </h1>
+
+
+    <script>
+        document.querySelector("#btRemove").addEventListener("click", () => {
+            document.querySelector("#t01").remove();
+        })
+
+
+
+        avatar = 1;
+        document.querySelector("#changePhotoBt").addEventListener("click", () => {
+            if(avatar == 1) {
+                document.querySelector("#avatar").setAttribute("src", "img/avatar-02.jpg");
+                avatar = 2;
+            }
+            else {
+                document.querySelector("#avatar").setAttribute("src", "img/avatar-01.jpg");
+                avatar = 1;
+            }
+        });
+
+
+
+        document.querySelector("#bt01").addEventListener("click", () => {
+
+            document.querySelector("#searchLink").setAttribute("href", "https://www.bing.com");
+
+            /* document.querySelector("#tag01").innerText = "<i>new text</i>"; */
+            /* document.querySelector("#tag01").innerHTML = "<i>new text</i>"; */
+            /* document.querySelector("#tag01").textContent = "<i>new text</i>"; */
+        })
+    </script>
+</body>
+</html>

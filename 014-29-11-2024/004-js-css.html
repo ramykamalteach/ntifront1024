@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newFormat {
+            background-color: magenta;
+            color: aqua;
+            border: 33px;
+
+            transition: all 5s;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="t01">First title here</h1>
+    <button id="bt01">change title format</button>
+
+    <br>
+
+    <button id="bt02">change title format 0002</button>
+
+    <script>
+        document.querySelector("#bt02").addEventListener("click", () => {
+            //document.querySelector("#t01").classList.remove("newFormat");
+            document.querySelector("#t01").classList.add("newFormat");
+        });
+
+
+        document.querySelector("#bt01").addEventListener("click", () => {
+            document.querySelector("#t01").style.backgroundColor = "red";
+            document.querySelector("#t01").style.color = "white";
+            document.querySelector("#t01").style.padding = "15px 150px";
+        });
+        
+    </script>
+</body>
+</html>
