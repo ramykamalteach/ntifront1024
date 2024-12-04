@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #countries {
+            display: flex;
+            flex-wrap: wrap;
+            width: 85%;
+            margin: 0 auto;
+        }
+        .oneCountry {
+            width: 22%;
+            aspect-ratio: 1.33;
+            border: thin solid red;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        select, span {
+            font-size: 48pt;
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+    <select onchange="getCountries(this.value);">
+        <option value="arabic">عربى</option>
+        <option value="english">إنجليزى</option>
+        <option value="spanish">اسبانى</option>
+        <option value="french">فرنسى</option>
+        <option value="italian">ايطالى</option>
+    </select>
+
+    <span id="countCountries"></span>
+
+    <hr>
+
+    <div id="countries"></div>
+
+    <script>
+        function getCountries(lang) {
+
+            document.querySelector("#countries").innerHTML = "";            
+
+            fetch("https://restcountries.com/v3.1/lang/" + lang , {
+                method: 'get',   // post get put delete
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                /* body: 'foo=bar&lorem=ipsum' */
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                document.querySelector("#countCountries").innerText = json.length + " countries";
+                for(i = 0; i < json.length; i++) {
+
+                    let country = document.createElement("div");
+
+                    let flag = document.createElement("img");
+                    flag.setAttribute("src", json[i].flags.png);
+                    flag.style.width = "75%";
+
+                    let countryName = document.createElement("h1");
+                    countryName.innerText = json[i].name.common;
+
+                    country.append(flag);
+                    country.append(countryName);
+
+                    country.classList.add("oneCountry");                
+
+                    document.querySelector("#countries").append(country);
+
+                    /* console.log(json[i].name.common); */
+                }
+            })
+            .catch(function (error) {
+                console.log('Request failed', error);
+            });
+        }
+    </script>
+
+</body>
+</html>

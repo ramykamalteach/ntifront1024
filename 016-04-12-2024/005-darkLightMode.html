@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="005-darkLightMode.css">
+</head>
+<body>
+
+    <select onchange="colorMode(this.value)" id="colorMode">
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+    </select>
+
+    <h1>My first title</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate aspernatur ea similique culpa optio. Ducimus provident, tempore ipsum libero fugit, autem rem officia minima voluptatibus, iusto nisi possimus sequi praesentium.</p>
+
+
+    <script>
+        window.onload = () => {
+            colorMode(localStorage.getItem("colorMode"));
+            if(localStorage.getItem("colorMode") == "dark") {
+                document.querySelector("#colorMode").getElementsByTagName("option")[1].selected = "selected";
+            }
+        };
+
+        function colorMode(currentMode) {
+            localStorage.setItem("colorMode", currentMode);
+            if(currentMode == "dark") {
+                document.querySelector(":root").style.setProperty('--mainColor', 'cyan');
+                document.querySelector(":root").style.setProperty('--bgColor', 'black');
+                document.querySelector(":root").style.setProperty('--secondaryColor', 'yellow');
+            }
+            else {
+                document.querySelector(":root").style.setProperty('--mainColor', 'Magenta');
+                document.querySelector(":root").style.setProperty('--bgColor', 'lightYellow');
+                document.querySelector(":root").style.setProperty('--secondaryColor', 'blue');
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
