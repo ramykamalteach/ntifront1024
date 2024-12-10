@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            border: solid 3px red;
+        }
+    </style>
+</head>
+<body>
+    <form action="001.html" id="form01" >
+        user name <input id="username">
+        <br>
+        password <input type="password" id="password">
+        <br>
+        <input type="submit">
+    </form>
+
+    <script>
+        document.querySelector("#form01").onsubmit = (e) => {
+            e.preventDefault();
+            allFieldGood = true;
+            
+            if(document.querySelector("#username").value.length < 8) {
+                allFieldGood = false;
+                document.querySelector("#username").classList.add("error");
+            }
+            if(document.querySelector("#password").value.length < 8) {
+                allFieldGood = false;
+                document.querySelector("#password").classList.add("error");
+            }
+
+
+            if(allFieldGood) {
+                document.querySelector("#form01").submit();
+            }
+        }
+    </script>
+</body>
+</html>
